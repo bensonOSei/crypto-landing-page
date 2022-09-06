@@ -2,7 +2,7 @@
 
 This is my submission to a challenge started by [Ossy](https://www.github.com/codinggossy)
 
-Live demo:
+Live demo: [https://crappo-landingpage.netlify.app/](https://crappo-landingpage.netlify.app/)
 
 ## Stack
 
