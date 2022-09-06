@@ -1,0 +1,63 @@
+$primary-color-100: #0D0D2B;
+$primary-color-200: #131338;
+$primary-color-300: #20204f;
+$primary-color-400: #343466;
+$secondary-color-100: #f8f4f4;
+$secondary-color-200: #ebe4e4;
+
+$btnColor: #3671e9;
+$textColor: #fff;
+$textColor-100: #c2c0c0;
+$altColor: #252540;
+
+//* font Variables
+$font-family-primary: "Oxanium", cursive;
+$font-family-header: $font-family-primary;
+$font-weigth-normal: 400;
+$font-weigth-heavy: 600;
+$font-weigth-heavy-x: 800;
+
+//* Size Variables
+$size-xxs: 0.8125rem;
+$size-xs: 0.875rem;
+$size-s: 0.9375rem;
+$size-m: 1rem;
+$size-l: 1.125rem;
+$size-xl: 1.25rem;
+$size-xxl: 1.5rem;
+$size-xxxl: 1.75rem;
+$size-huge: 2rem;
+$size-xhuge: 2.125rem;
+$size-xxhuge: 2.5rem;
+$size-xxxhuge: 2.8125rem;
+
+//* Functions
+@mixin gridCenter {
+  display: grid;
+  place-items: center;
+}
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin fitImage($fit) {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: $fit;
+  }
+}
+
+@mixin marginCenter($maxWidth, $space) {
+  width: min($maxWidth, 100% - $space);
+  margin-inline: auto;
+}
+
+@mixin responsiveWidth($maxWidth) {
+    width: 100%;
+    max-width: $maxWidth;
+}

@@ -1,0 +1,183 @@
+@media screen and (max-width: 75em) {
+  header {
+    nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: $primary-color-200;
+      transition: width .2s ease-in-out;
+      overflow: hidden;
+      z-index: 999;
+      &.open {
+        width: 100%;
+      }
+
+      a {
+        font-size: $size-xxl;
+      }
+    }
+  }
+
+  .menuBtn,
+  .closeMenu {
+    display: block;
+  }
+
+  .closeMenu {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+  }
+
+  main section {
+    flex-direction: column;
+    align-items: center;
+    > div {
+      width: 100%;
+      //    background-color: red;
+    }
+
+    &.hero {
+      > div {
+        width: 70%;
+      }
+
+      .hero-image {
+
+        img{
+          width: 100%;
+        }
+      }
+
+      .hero-icons-container {
+        // @include marginCenter(70rem,5rem);
+        flex-direction: column;
+        align-items: center;
+
+        .hero-icon {
+          width: 50%;
+          // background-color: red;
+          margin-bottom: $size-huge;
+          justify-content: space-between;
+
+          .icon-text {
+            // background-color: red;
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+
+    .card {
+      width: 100%;
+    }
+  }
+
+  .offset{
+    margin-top: -30rem;
+    form {
+      flex-direction: column;
+
+      input,select {
+        padding: $size-xxl;
+        color: $textColor-100;
+      }
+
+      select {
+        width: 100%;
+        margin: 0;
+      }
+      button{
+        margin-top: $size-l;
+        width: fit-content;
+        padding: $size-l;
+      }
+    }
+    
+  }
+  .newsletter {
+    padding: $size-xl;
+    > div {
+      width: 100%;
+    }
+
+    form {
+      flex-direction: column;
+      align-items: center;
+
+      button {
+        margin-top: $size-l;
+        width: fit-content;
+        padding: $size-m;
+      }
+    }
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+
+    nav, div{
+      // background-color: red;
+      margin-top: $size-l;
+
+      a, h4{
+        // background-color: red;
+        text-align: center;
+        width: 100%;
+      }
+
+      a{
+        padding: .325rem
+      }
+
+    }
+
+    .footer-icons div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: $size-s;
+      width: 100%;
+
+      img:nth-child(2) {
+        margin: 0;
+
+      }
+      h4{
+        text-align: center;
+      }
+    }
+
+    .footnote {
+      flex-direction: column;
+    }
+  }
+}
+
+
+@media screen and (max-width: 50rem) {
+main section.hero > div {
+  width: 100%;
+
+}
+h4 {
+  font-size: $size-l;
+}
+
+.large {
+  font-size: $size-xxl;
+}
+
+}

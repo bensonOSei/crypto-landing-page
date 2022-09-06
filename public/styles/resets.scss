@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+    // scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: $primary-color-100;
+    font-family: $font-family-primary;
+    color: $textColor;
+}
+
+a{
+    text-decoration: none;
+}

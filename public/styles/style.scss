@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700&family=Rubik:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap');
+@import 'variables';
+@import 'resets';
+#app {
+    color: $textColor;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+    color: $textColor;
+}
+.button {
+    display: flex;
+    align-items: center;
+    padding: $size-xxs;
+    // margin-left: 1rem;
+    background-color: $btnColor;
+    border-radius: 1.5rem;
+    width: fit-content;
+
+    i {
+        margin-left: $size-xs;
+        padding: $size-s;
+        border-radius: 1.5rem;
+        background-color: $textColor;
+        color: $btnColor;
+    }
+}
+
+h4{
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin: 2.5rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $size-s;
+    @include marginCenter(75rem,2rem);
+}
+
+.menuBtn, .closeMenu {
+    font-size: $size-xxl;
+    display: none;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+
+    .loginReg{
+        display: flex;
+
+        a:first-child{
+            border-right: 1px solid $primary-color-300;
+        }
+    }
+    a {
+        padding: $size-xxs $size-xxs;
+        color: $textColor;
+
+        &.diff{
+            padding: .5125rem;
+            margin-left: 1rem;
+            background-color: $btnColor;
+            border-radius: 1.5rem;
+        }
+    }
+}
+
+
+main {
+    section {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        @include marginCenter(75rem,5rem);
+        margin-bottom: 5rem;
+
+        &.reverse {
+            justify-content: space-between;
+            flex-direction: row-reverse;
+        }
+
+        > div {
+            width: 50%;
+        }
+
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            .discount-notice {
+                width: fit-content;
+                background-color: $altColor;
+                border-radius: $size-l;
+
+                p {
+                    font-size: $size-xxs;
+                    margin: 5px;
+                    padding: 5px;
+
+
+                    span {
+                        background-color: $textColor;
+                        color: $altColor;
+                        padding: inherit;
+                        border-radius: $size-l;
+                        margin-right: $size-xxs;
+                    }
+                }
+            }
+            h1 {
+                font-size: $size-xhuge;
+                padding: 0;
+                //margin: 0;
+            }
+
+            .button {
+                margin-top: 1rem;
+            }
+        }
+
+        // .hero-image {
+        //     // @include fitImage(contain);
+        //     // background-color: red;
+        // }
+
+        .hero-icons-container{
+            flex: 1 100%;
+            // width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: $size-xxhuge;
+
+            .hero-icon {
+                display: flex;
+                align-items: center;
+                // width: 100%;
+
+
+                .icon-container{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    background-color: $altColor;
+                    color: $btnColor;
+                    @include gridCenter;
+                    margin-right: $size-l;
+
+                    i{
+                        font-size: $size-xxl;
+                    }
+                }
+
+                .icon-text {
+                    h2{
+                        font-weight: $font-weigth-heavy;
+                    }
+                    p{
+                        color: $textColor-100;
+                        font-size: $size-xxs;
+                    }
+                    h2,p{
+                        // padding: 0;
+                        margin: 0;
+                    }
+                }
+            }
+            // background-color: red;
+        }
+
+
+
+    }
+}
+
+.section-text {
+    h3 {
+        font-weight: $font-weigth-heavy;
+        font-size: $size-xxxhuge;
+    }
+
+    p{
+        color: $textColor-100;
+    }
+}
+
+.section-image {
+    padding: $size-xl;
+    @include fitImage(contain);
+    img {
+        width: 100%;
+    }
+}
+
+
+section.off {
+    flex-direction: column;
+    background-color: $secondary-color-100;
+    width: 100%;
+    margin-top: 25rem;
+    padding: 1rem;
+
+    >div {
+        color: black;
+    }
+}
+
+.offset{
+    margin-top: -20rem;
+    padding: $size-l;
+    display: grid;
+    // width: 80%;
+    @include marginCenter(50rem,2rem);
+
+
+
+    .header {
+        h4{
+            color: $textColor;
+            font-size: $size-xxl;
+            font-weight: 500;
+        }
+        p{
+            color: $textColor-100;
+        }
+        h4,p{
+            text-align: center;
+        }
+    }
+
+    .body {
+        background-color: $textColor;
+        padding: $size-xxhuge;
+        border-radius: $size-l;
+        box-shadow: 0 0 15px #0003;
+
+        form button{
+            // background-color: red;
+            padding: $size-xxs;
+        }
+
+        p:nth-child(3){
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+
+}
+.cards {
+    display: flex;
+    // width: 100%;
+    @include marginCenter(75rem,2rem);
+    justify-content: space-around;
+    padding: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    .cards-header {
+        flex: 1 100%;
+        text-align: center;
+        font-size: $size-xxxl;
+        // background-color: red;
+    }
+    .card {
+        text-align: center;
+        background-color: $textColor;
+        padding: $size-xl;
+        border-radius: $size-m;
+        width: 300px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+
+        .card-text-main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // background-color: red;
+        }
+        .card-text-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: $size-xxs;
+            margin-top: $size-huge;
+
+            h4{
+                font-size: $size-huge;
+                font-weight: $font-weigth-heavy-x;
+                margin: 0;
+                margin-left: 0;
+            }
+            p{
+                color: $textColor-100;
+            }
+        }
+
+        .button {
+            padding: .125rem;
+            background-color: $textColor;
+            color: $btnColor;
+            border: 1px solid $textColor-100;
+            // justify-content: center;
+            border-radius: 50%;
+            transition: all .2s ease;
+
+            i{
+                margin: 0;
+                text-align: center;
+                font-size: $size-xxxl;
+            }
+
+            a{
+                display: none;
+            }
+            // width: 50px;
+        }
+
+
+        &:hover {
+            background-color: $primary-color-300;
+            color: $textColor;
+
+            .button {
+                padding: .625rem;
+                border-radius: 1.5rem;
+                background-color: $btnColor;
+                color: $textColor;
+                border: none;
+
+                a{
+                    display: inline;
+                }
+
+                i {
+                    background-color: transparent;
+                    color: $textColor;
+                    font-size: $size-xxl;
+                }
+            }
+        }
+
+    }
+
+}
+form {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+    input,select {
+        border: none;
+        border-bottom: 1px solid $textColor-100;
+        background-color: inherit;
+        padding: $size-xs;
+        font-size: $size-l;
+
+    }
+
+    input {
+        width: 100%;
+    }
+
+    select{
+        margin: 0 $size-xxs 0 $size-xxs;
+    }
+
+    button{
+        font: inherit;
+        appearance: none;
+        border: none;
+        background-color: $btnColor;
+        color: $textColor;
+        border-radius: $size-m;
+        // font-weight: $font-weigth-heavy;
+        font-size: $size-l;
+        cursor: pointer;
+    }
+}
+
+.newsletter{
+    // background-color: red;
+    padding: $size-xxl;
+    background-image: url("./newsletter.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: $size-l;
+    // margin-bottom: 5rem;
+
+    div {
+        width: 50%;
+    }
+    .text {
+        padding: 1rem;
+
+        h4{
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            font-weight: $font-weigth-heavy;
+        }
+        p{
+            font-size: $size-s;
+        }
+        h4,p{
+            text-align: left;
+        }
+    }
+
+    form {
+        input {
+            color: $textColor;
+            border-bottom: 1px solid $textColor;
+            &::placeholder{
+                color: $textColor;
+            }
+        }
+        button {
+            background-color: $textColor;
+            color: $btnColor;
+            margin-left: 1rem;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    @include marginCenter(75rem,5rem);
+
+    nav a:hover {
+        color: $btnColor;
+    }
+
+    nav, .footer-icons {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        // background-color: blue;
+
+        h4{
+            // background-color: red;
+            font-size: $size-l;
+            font-weight: $font-weigth-heavy-x;
+            width: 100%;
+            margin: 0;
+            padding-bottom: $size-xl;
+            text-align: left;
+        }
+
+    }
+
+    .footer-icons div img:nth-child(2) {
+        margin-left: $size-xxs;
+        margin-right: $size-xxs;
+    }
+
+    .footnote {
+        flex: 1 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $size-l;
+        .social-icons {
+            * {
+                margin-left: 1rem;
+                font-size: $size-xl;
+            }
+        }
+    }
+}
+
+.bold {
+    font-weight: $font-weigth-heavy-x
+}
+
+.large {
+    font-size: $size-huge
+}
+
+.blue {
+    color: $btnColor;
+}
+@import 'mediaQueries';
