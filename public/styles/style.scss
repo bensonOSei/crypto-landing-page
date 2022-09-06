@@ -323,7 +323,7 @@ section.off {
         }
 
 
-        &:hover {
+        &.active {
             background-color: $primary-color-300;
             color: $textColor;
 

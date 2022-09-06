@@ -1,5 +1,5 @@
- <template>
-    <div class="card" >
+<template>
+    <div class="card" @click="activateMe()" >
         <div class="card-icon">
             <Image :source="imageSource" />
         </div>
@@ -30,17 +30,17 @@ import ButtonIcon from './Buttons/ButtonIcon.vue';
         cardText: String
     },
     components: { Image, ButtonIcon },
-    // methods: {
-    //     activateMe(){
-    //         let cards = document.querySelectorAll('.card');
-    //         cards.forEach(card => {
-    //             card.classList.remove('active');
-    //         });
-    //         let card = this.$el;
-    //         card.classList.add("active");
-    //         // console.log(card);
-    //     }
-    // }
+    methods: {
+        activateMe(){
+            let cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.classList.remove('active');
+            });
+            let card = this.$el;
+            card.classList.add("active");
+            // console.log(card);
+        }
+    }
 }
 </script>
 

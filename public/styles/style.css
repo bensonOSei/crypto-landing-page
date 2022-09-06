@@ -294,21 +294,21 @@ section.off > div {
 .cards .card .button a {
   display: none;
 }
-.cards .card:hover {
+.cards .card.active {
   background-color: #20204f;
   color: #fff;
 }
-.cards .card:hover .button {
+.cards .card.active .button {
   padding: 0.625rem;
   border-radius: 1.5rem;
   background-color: #3671e9;
   color: #fff;
   border: none;
 }
-.cards .card:hover .button a {
+.cards .card.active .button a {
   display: inline;
 }
-.cards .card:hover .button i {
+.cards .card.active .button i {
   background-color: transparent;
   color: #fff;
   font-size: 1.5rem;
